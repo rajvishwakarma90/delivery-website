@@ -1,0 +1,103 @@
+/* General Styles */
+.list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.add {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.list p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 50px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-table-format.title {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+/* Image Styling */
+.list-table-format img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller screens */
+    .list-table-format {
+        grid-template-columns: 70px 1fr 1fr 1fr;
+    }
+
+    .list-table-format img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .list p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile devices */
+    .list {
+        padding: 10px;
+    }
+
+    .list-table-format {
+        grid-template-columns: 1fr 1fr;
+        /* Stack items into 2 columns */
+        padding: 15px 0;
+    }
+
+    .list-table-format img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .list-table-format p {
+        font-size: 14px;
+        /* Smaller font size on mobile */
+    }
+
+    .list p {
+        font-size: 16px;
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}

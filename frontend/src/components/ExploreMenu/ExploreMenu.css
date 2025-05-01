@@ -1,0 +1,141 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 0;
+}
+
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+}
+
+.explore-menu-text {
+    max-width: 60%;
+    color: #808080;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.explore-menu-list {
+    display: flex;
+    gap: 2.5rem;
+    margin: 20px 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-menu-list-item {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.explore-menu-list-item .image-container {
+    position: relative;
+    width: clamp(80px, 7.5vw, 120px);
+    height: clamp(80px, 7.5vw, 120px);
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.explore-menu-list-item img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 1;
+}
+
+
+.explore-menu-list-item:hover .image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(255, 65, 108, 0.4) 0%, 
+        rgba(255, 65, 108, 0.2) 50%, 
+        transparent 70%);
+    animation: glow 1.5s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.explore-menu-list-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+.explore-menu-list-item p {
+    color: #747474;
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+    margin: 0;
+    text-align: center;
+    max-width: 100px;
+    line-height: 1.3;
+}
+
+
+.explore-menu-list-item.active .image-container {
+    border: 3px solid #ff416c;
+    padding: 3px;
+    animation: border-pulse 2s infinite ease-in-out;
+}
+
+@keyframes border-pulse {
+    0%, 100% { 
+        border-width: 3px;
+        transform: scale(1);
+    }
+    50% { 
+        border-width: 5px;
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 90%;
+    }
+    
+    .explore-menu-list {
+        gap: 1.5rem;
+        scroll-padding: 20%;
+    }
+    
+    .explore-menu-list-item p {
+        font-size: 0.9rem;
+    }
+}

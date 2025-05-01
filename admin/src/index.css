@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fcfcfc;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+
+.app-content {
+    display: flex;
+}
+.add {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-img-upload label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.add-img-upload img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-price input,
+.add-category select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-category-price {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.add-category,
+.add-price {
+    flex: 1;
+    min-width: 200px;
+}
+
+.add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.add p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}

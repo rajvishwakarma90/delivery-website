@@ -1,0 +1,166 @@
+
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('C:/Users/raj86/OneDrive/Desktop/asdssda/frontend/public/image.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+    position: relative;
+    overflow: visible; 
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    animation: gradientShift 10s ease infinite;
+    z-index: 1;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    z-index: 2;
+    animation: slideIn 2s ease-out;
+}
+
+
+.header-contents h2 {
+    font-weight: 600;
+    color: rgb(250, 252, 252);
+    font-size: clamp(22px, 4.5vw, 32px);
+}
+
+.header-contents p {
+    color: rgb(252, 255, 255);
+    font-size: 1.3vw;
+}
+
+.header-contents button {
+    border: none;
+    color: rgb(174, 109, 17);
+    font-weight: 400;
+    padding: 1vw 2.3vw;
+    background-color: azure;
+    font-size: clamp(13px, 1vw, 16px);
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.header-contents button:hover {
+    background-color: rgb(174, 109, 17);
+    color: azure;
+    transform: scale(1.05);
+}
+
+
+.ai-recommendation-container {
+    position: relative;
+    margin-top: 15px;
+}
+
+.ai-recommendation-btn {
+    padding: 10px 20px;
+    background-color: #ff4c29;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ai-recommendation-btn:hover {
+    background-color: #e03e1a;
+}
+
+.ai-recommendation {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    width: max-content;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.goal-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.goal-button {
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.goal-button.active {
+    background-color: #ff4c29;
+    color: white;
+}
+
+.recommendations-list {
+    margin-top: 15px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}

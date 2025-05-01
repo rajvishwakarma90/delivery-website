@@ -1,0 +1,32 @@
+.health-goals-container {
+    text-align: center;
+    margin: 40px 20px;
+  }
+  
+  .health-goals-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .goal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .goal-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .goal-btn:hover {
+    background-color: #27ae60;
+  }
+  

@@ -1,0 +1,72 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.home-header {
+    margin-bottom: 40px;
+}
+
+
+.home-explore-menu {
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.home-food-display {
+    margin-bottom: 60px;
+}
+
+
+.home-app-download {
+    background: linear-gradient(135deg, #ffe8d6, #fff8f1);
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 30px 16px;
+    }
+
+    .home-app-download {
+        padding: 40px 16px;
+    }
+}

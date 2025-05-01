@@ -1,0 +1,119 @@
+.place-order {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    animation: fadeSlideIn 0.7s ease;
+}
+
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.place-order-left,
+.place-order-right {
+    flex: 1;
+    min-width: 320px;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeSlideIn 0.7s ease;
+}
+
+
+.place-order-left .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+
+.place-order-left input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+.place-order-left input:focus {
+    border-color: #ff4d4f;
+    outline: none;
+}
+
+
+.multi-fields {
+    display: flex;
+    gap: 15px;
+}
+
+
+.cart-total {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeSlideIn 0.8s ease;
+}
+
+.cart-total h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.cart-total-details b {
+    font-weight: bold;
+    color: #111;
+}
+
+.cart-total button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background-color: #ff4d4f;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+    background-color: #e63c3e;
+}
+
+
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .multi-fields {
+        flex-direction: column;
+    }
+}

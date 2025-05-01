@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]"
+        ]
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "mask-image",
+          "overscroll-behavior-x",
+          "overscroll-behavior-x: contain"
+        ]
+      }
+    ],
+    "typescript-config/consistent-casing": "off",
+    "typescript-config/strict": "off",
+    "typescript-config/is-valid": "off"
+  }
+}

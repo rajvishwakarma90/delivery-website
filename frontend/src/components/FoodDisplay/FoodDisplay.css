@@ -1,0 +1,45 @@
+.food-display-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .ai-recommendation-sidebar {
+        width: 100%;
+        right: -100%;
+        border-radius: 15px 0 0 0;
+        top: auto;
+        bottom: 0;
+        height: 60vh;
+    }
+    
+    .ai-recommendation-sidebar.visible {
+        right: 0;
+    }
+    
+    .guide-toggle-btn {
+        right: -60px;
+        top: auto;
+        bottom: 100px;
+    }
+    
+    .guide-toggle-btn:hover {
+        right: -55px;
+    }
+}
